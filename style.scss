@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 2px 0px 0px 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__logo{
+    width: 60%;
+    height: auto;
+}
+
+.location__container{
+    width: 100vw;
+    height: 10vw;
+    display: flex;
+    justify-content: space-between;
+    .location__icon{
+        width: 10%;
+        height: 100%;
+    }
+    .location__title{
+        width: 50%;
+        height: 100%;
+        font-size: 18px;
+    }
+}
