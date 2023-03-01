@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
+
+h3, p, a, strong, li{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2{
+    font-family: 'Shrikhand', cursive;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 0px -6px 11px 0px gray;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+    text-align: center;
+}
+.header__logo{
+    width: 50%;
+    height: auto;
+    color: black;
+    margin-left: 20%;
+}
+
+
+
+.main__img{
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.menu__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+    width: 100vw;
+    border-radius: 20px;
+    margin-top: -30px;
+    background-color: #f6f6f6;
+    z-index: 2;
+    position: relative;
+    .heading__container{
+      width: 90vw;
+      padding: 4%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .menu__heading{
+        font-size: 20px;
+      }
+    }
+}
+
+.list__container{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    .list__title::after{
+        content: "";
+        display: block;
+        width: 5vw;
+        height: 2px;
+        background-color: #99E2D0;
+      }
+}
+
+.list__container--taller{
+  height: 35%
+}
+
+.list__menu__container{
+    width: 90vw;
+    height: 10vh;
+    background-color: lightgrey;
+    border-radius: 20px;
+    overflow: hidden;
+    .list__menu{
+      height: 100%;
+      .menu__content{
+        width: 105vw;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-overflow: ellipsis;
+        .menu__price{
+          margin: 0 2vw;
+          transform: translateY(2vw);
+        }
+        .menu__heading{
+          overflow: hidden;
+          margin-left: 2vw;
+          width: 70vw;
+          &__title{
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          &__subtitle{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+      }
+      .menu__check{
+        width: 15vw;
+        height: 100%;
+        background-color: #99E2D0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa-circle-check{
+          color: white;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  
+  .menu__content:hover{
+    animation: decrease 1s forwards;
+    .fa-circle-check{
+      animation: spin 1s forwards;
+    }
+  }
+  
+  @keyframes decrease{
+   to{
+      width: 90vw;
+      transform-origin: right;
+    }
+  }
+  
+  @keyframes spin{
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+.order{
+    width: 50vw;
+    height: 8vh;
+    border-radius: 40px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin: 6% auto;
+}
+
+.heading__container .fa-heart{
+  display: flex;
+  font-size: 1.7rem;
+}
+
+/*.ajout du coeur plein rose */
+.fa-heart--like{
+  position: absolute;
+  opacity: 0;
+  &:active{
+      position: absolute;
+      font-size: 1.7rem;
+      animation: like 2s linear forwards;
+    }
+}
+
+/* animation like */
+
+@keyframes like{
+  0%{
+    opacity: 1;
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+    color: #9356DC;
+    opacity: 1;
+  }
+}
+
+
+
+
+footer{
+    width: 100vw;
+    height: 25vh;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #2a2a2a;
+}
+
+.footer__logo{
+    width: 30%;
+    height: 15%;
+    filter: invert(100%)
+}
+
+.footer__menu{
+    height: 70%;
+    &__list{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .footer__menu__link{
+            color: white;
+            &__icon{
+                color: white;
+            }
+        }
+    }
+}
