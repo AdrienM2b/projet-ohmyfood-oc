@@ -229,7 +229,7 @@ header{
 
 
 footer{
-    width: 100vw;
+    width: 92vw;
     height: 25vh;
     padding: 4%;
     display: flex;
@@ -259,3 +259,31 @@ footer{
         }
     }
 }
+
+// media queries desktop 
+
+@media screen and (min-width: 991px) {
+  .header__logo {
+    width: 20%;
+  }
+
+  .main__img {
+    height: 45vh;
+  }
+
+  .menu__container {
+    height: 200vh;
+  }
+
+  .list__container {
+    height: 50vh;
+  }
+
+  .footer__logo {
+    width: 12%;
+  }
+}
+
+//media queries tablette 
+
+@media screen and (min-width: 767px) {}
