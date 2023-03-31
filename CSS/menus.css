@@ -269,4 +269,11 @@ footer {
   .footer__logo {
     width: 12%;
   }
+  .fa-heart--like {
+    opacity: 1;
+    color: transparent;
+  }
+  .fa-heart--like:hover {
+    color: #9356DC;
+  }
 }/*# sourceMappingURL=menus.css.map */
